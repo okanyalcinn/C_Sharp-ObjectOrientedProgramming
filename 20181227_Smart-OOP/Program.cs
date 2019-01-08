@@ -10,6 +10,6 @@ namespace _20181227_Smart_OOP
     {
         static void Main(string[] args)
         {
-        }
+        } 
     }
 }
