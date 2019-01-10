@@ -19,9 +19,9 @@ namespace koleksiyonlar_kullanimlari_tanimi
          * Dictionary<K,T>                      Hashtable
          * 
          * Non-Generic koleksiyonlar elemanlarını object tipli aldıkları için Boxing işlemine maruz kalır. 
-         *   Boxing işlemine maruz kaldığı için unboxing işlemi yaparız.
+         *   Boxing işlemine maruz kaldığı için unboxing işlemi yaparız. 
          * Koleksiyonumuzda bazen tek tipli değerler girilirse bu Non-Generic oluyor haliyle 
-         *   Boxing ve unboxing işlemi uygulandığı içi performans olarak daha yavaş çalışır
+         *   Boxing ve unboxing işlemi uygulandığı için performans olarak daha yavaş çalışır
          *   
          * Generic koleksiyonlarda ise tanımlanan nesnelerin taşıdığı değerler kümesinin tiplerini bildiğimiz için.
          *   Boxing ve un-boxing işlemine maruz kalmaz direkt olarak erişim sağlanır, bu durumda performans artışı kaçınılmaz,
@@ -34,8 +34,8 @@ namespace koleksiyonlar_kullanimlari_tanimi
          *  -Koleksiyonlar ise referans tipli new ahahtar sözcüğü ile nesne türetebilir, aynı zamanda dizilerin 
          *      aksine koleksiyon olarak türetilen nesneye birden çok nesne bağlanabilir, n tane gider
          *  
-         *  -Değer tipli: int,float, double, short byte, enum, char, struct
-         *  -Referans tipli: string, onject, delegate, interface, class, var
+         *  -Değer tipli: int,float, double, short, byte, enum, char, struct
+         *  -Referans tipli: string, object, delegate, interface, class, var
          *  
          * ArrayList
          * 
@@ -54,14 +54,14 @@ namespace koleksiyonlar_kullanimlari_tanimi
          * 
          * •List Kullanımı
          *   Liste dizilerinin aksine Liste oluşturma, Listeye eleman ekleme, silme, sıralama, arama gibi işlemleri kendi barındırır.
-         *          daha komplike daha komplex yapılaro içerisinde barındırabilir.
+         *          daha komplike daha komplex yapıları içerisinde barındırabilir.
          *   Kullanımı:
          *      List<string> liste = new List<string>();
          *      List<tipi> nesne = new List<tipi>();
          *      
          * Queue - Kuyruk
          *      İlk giren ilk çıkar algoritmasına haizdir (sahiptir)
-         *      Kuyruk yapısı (first-in  firs-out), FIFO prensibine göre çalışır         
+         *      Kuyruk yapısı (first-in  first-out), FIFO prensibine göre çalışır         
          *      enqueue(arka sıraya katılma)
          *      dequeue(sırayı önden terkeder)
          *  Kullanımı 

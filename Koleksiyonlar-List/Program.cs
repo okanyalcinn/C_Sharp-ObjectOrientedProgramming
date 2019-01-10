@@ -20,6 +20,12 @@ namespace Koleksiyonlar_List
             {
                 Console.WriteLine(ts[i]);
             }
+            Console.WriteLine("\nTersten sıralama ------------------");
+            ts.Reverse();
+            for (int i = 0; i < ts.Count; i++)
+            {
+                Console.WriteLine(ts[i]);
+            }
 
         }
     }

@@ -12,8 +12,8 @@ namespace koleksiyonlar_hashtable_kullanimi
         static void Main(string[] args)
         {
             // Hashtable verileri karışık sırada alır döndürür 
-                //-- sıralamak için arrayList e atıp Sort kullanarak sıralayabiliriz. 
-                //      ama böyle birşey yapmak mantıksız olacaktır. bu işlem daha uzun sürecektir
+            //-- sıralamak için arrayListe atıp Sort kullanarak sıralayabiliriz. 
+            //      ama böyle birşey yapmak mantıksız olacaktır. Tekrar sıralama oluğu için bu işlem daha uzun sürecektir 
 
             Hashtable hashtable = new Hashtable();
             hashtable.Add(53, "Rize");

@@ -24,12 +24,12 @@ namespace koleksiyonlar_List_ornek1
         public int PortalNo { get; set; }
         public float Not1 { get; set; }
         public float Not2 { get; set; }
-        private float ortalama { get; set; }
+        public float ortalama { get; set; }
 
         public float hesaplama(float a, float b)
         {
-            float ortalama = (a + b) / 2;
-            return ortalama ;
+            float ort = (a + b) / 2;
+            return ort ;
         }
 
     }

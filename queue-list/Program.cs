@@ -35,7 +35,8 @@ namespace queue_list
             
             Console.WriteLine("dequeu > ilk çıkan > "+ts.Dequeue());
             Console.WriteLine("");
-            // for u bunda kullanmak pek doğru değil - kuyruktan eksiltme yapılırsa fordan önce karışıklık çıkabilir
+            // for u bunda kullanmak pek doğru değil 
+            //      -fordan önce kuyruktan eksiltme yapılırsa karışıklık çıkabilir. sebebi for döngüsü değişleni olan i nin +1 -1 olayından dolayı
             for (int i = -1; i <= ts.Count+1; i++)
             {
                 Console.Write(ts.Count);

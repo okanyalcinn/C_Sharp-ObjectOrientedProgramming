@@ -35,14 +35,14 @@ namespace koleksiyonlar_sortedList
                 Console.WriteLine(item.Key + "-" + item.Value);
             }
             Console.WriteLine("------------------------");
-            Console.WriteLine("\nkey");
+            Console.WriteLine("\ncollection-key");
             ICollection collection = s.Keys;
             foreach (var item in collection)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine("------------------------");
-            Console.WriteLine("\nvalue");
+            Console.WriteLine("\ncollection-value");
             ICollection collection1 = s.Values;
             foreach (var item in collection)
             {
