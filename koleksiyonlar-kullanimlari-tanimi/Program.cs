@@ -11,7 +11,32 @@ namespace koleksiyonlar_kullanimlari_tanimi
         /* 
          * Sysyem.Collections
          * 
-         * int[] i
+         * Generic Collections                  Non-Generic Collections
+         * Queue<Type>                          Queue
+         * SortedDictionary<Key,T>              SortedList
+         * Stack<T>                             Stack
+         * List<T>                              ArrayList
+         * Dictionary<K,T>                      Hashtable
+         * 
+         * Non-Generic koleksiyonlar elemanlarını object tipli aldıkları için Boxing işlemine maruz kalır. 
+         *   Boxing işlemine maruz kaldığı için unboxing işlemi yaparız.
+         * Koleksiyonumuzda bazen tek tipli değerler girilirse bu Non-Generic oluyor haliyle 
+         *   Boxing ve unboxing işlemi uygulandığı içi performans olarak daha yavaş çalışır
+         *   
+         * Generic koleksiyonlarda ise tanımlanan nesnelerin taşıdığı değerler kümesinin tiplerini bildiğimiz için.
+         *   Boxing ve un-boxing işlemine maruz kalmaz direkt olarak erişim sağlanır, bu durumda performans artışı kaçınılmaz,
+         *   aynı zamanda daha güvenlidir
+         * 
+         * 
+         * 
+         * Generic(genel amaçlı koleksiyonlar) Collections
+         *  -Diziler değer bazlı aynı tip elemanları barındırır
+         *  -Koleksiyonlar ise referans tipli new ahahtar sözcüğü ile nesne türetebilir, aynı zamanda dizilerin 
+         *      aksine koleksiyon olarak türetilen nesneye birden çok nesne bağlanabilir, n tane gider
+         *  
+         *  -Değer tipli: int,float, double, short byte, enum, char, struct
+         *  -Referans tipli: string, onject, delegate, interface, class, var
+         *  
          * ArrayList
          * 
          * -Sınırlı fakat dinamik değişebilir dizi olarak tanımlanabilir
@@ -59,7 +84,36 @@ namespace koleksiyonlar_kullanimlari_tanimi
          *    st.Push('d');
          *    st.Push(5.5);
          *    cw(st.Pop());
-         *     
+         * 
+         * SortedList Kullanımı
+         *  SortedList(Sıralı liste) Sınıfı hastable ile aynı özellikleri gösterir
+         *  SortedList anahtar ve value şeklinde verileri tutar ve sıralama işleminde anahtara göre sıralamayı otomatik yapar
+         *  
+         *  kullanımı
+         *  SortedList not = new SortedList();
+         *  not["matematik"] = 100;
+         *  not["fizik"] = 50;
+         *  
+         *  not[53] = "rize";
+         *  
+         *  foreach(var item in not)
+         *      string ders = (string)item.Key
+         *      int not = (int)item.Value
+         *  
+         *  HashTable Kullanımı 
+         *  HashTable (karışık içerikler) veriler key-value ilişkisi ile tutulur (anahtar değer şeklinde) veriler datayı barındırır.
+         *  
+         *  Key tablosunu ayrı bir tabloda değerler ise value tablosunda tutulur
+         *  
+         *  Hashtable ders = new Hastable();
+         *  
+         *  ders["mat"] = 50;
+         *  ders["fizik"] = 70;
+         *  
+         *  foreach(var item in not)
+         *      string ders = (string)item.Key
+         *      int not = (int)item.Value
+         *  
          * 
          * */
         static void Main(string[] args)
