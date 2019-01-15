@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace class_generic_ornek1
 {
     //gelen iki not ortalama degere durum ve sonuc bilgini Generic Metotlar
+    // gelen iki not otalamasını degere göre durum ve sonuc bilgisini generic metod kullanarak döndürme
     class Islem<T>
     {
         public string Sonuc { get; set; }
         public string Durum { get; set; }
         public T Not1 { get; set; }
         public T Not2 { get; set; }
-        public T Not { get; set; }
 
         public Islem(T a, T b)
         {
@@ -22,7 +22,7 @@ namespace class_generic_ornek1
         }
         public T Hesapla(ref double not1, ref double not2)
         {
-            //Notun defaoult degerini alıyor int o sifr string null gibi
+            //Notun default degerini alıyor int o sıfır string null gibi
             T not = default(T);
             //not = (not1 + not2) / 2;
             if (not1 > 50)

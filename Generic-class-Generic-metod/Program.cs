@@ -21,7 +21,7 @@ namespace Generic_class_Generic_metod
      *  
      *  where T:NameOfInterface = bunun yerine interface ismi yazılır T'nin bu interface'yi veya birden çok interface'leri implement etmiş olması gerekir
      *  
-     *  where Generic metoda gönderilecek tipin alınacak yeri 
+     *  where → Generic metoda gönderilecek tipin nereden alınacağını bildirme (yazılımcılar için bir nevi klavuz class'tan bu değişkenin tipini almayı zorunlu kılabiliriz) 
      *  */
     public class Koordinat<T> //where T:class
     {
