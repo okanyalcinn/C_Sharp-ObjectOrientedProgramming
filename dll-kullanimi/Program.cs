@@ -24,9 +24,8 @@ namespace dll_kullanimi
             Console.WriteLine("Saatlik ücretiniz?");
             double _SaatlikUcret = double.Parse(Console.ReadLine());
 
-            Personel<double> personel = new Personel<double>(_Saat, _SaatlikUcret);
-            personel.MaasHesapla(ref _Saat, ref _SaatlikUcret);
-            personel.Goster(_SaatlikUcret);
+            Personel<double> personel = new Personel<double>(_Saat, _SaatlikUcret);// yapıcı metodumuza değerleri gönderiyoruz
+            personel.Goster(); // goster metodunu çağırarak ekrana sonucu yazdırıyoruz
 
             
 

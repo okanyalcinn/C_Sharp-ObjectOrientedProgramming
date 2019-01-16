@@ -20,25 +20,41 @@ namespace dll_kaynak
         public T Saat { get; set; }
         public T SaatlikUcret { get; set; }
         public T Maas { get; set; }
-
-        public Personel(T Saat, T SaatlikUcret)
+        /// <summary>
+        /// Pesonel yapıcı metodu ile diğer classtan gelen verileri bu classtaki T tipli fieldlara 
+        /// değer atamasını gerçekleştirdik
+        /// </summary>
+        /// <param name="Saat"></param>
+        /// <param name="SaatlikUcret"></param>
+        public Personel(T _Saat, T _SaatlikUcret)
         {
-            this.Saat = Saat;
-            this.SaatlikUcret = SaatlikUcret;
+            this.Saat = _Saat;
+            this.SaatlikUcret = _SaatlikUcret;
         }
-        public T MaasHesapla(ref double Saat, ref double SaatlikUcret)
+        /// <summary>
+        /// hesapla metodunda T tipli fieldları önce double a çevirip çarpma işlemini yaptırarak 
+        /// sonrasında T tipine tekrar çevirim maas fieldına atama yaptık
+        /// </summary>
+        /// <returns></returns>
+        T MaasHesapla()
         {
-            double d = Saat * SaatlikUcret;
-            Maas = (T)Convert.ChangeType(d, TypeCode.Double);
+            // (double)(object)Saat → kullanımıyla T tipli saat fieldını önce objecte sonrasında double'a çevirdik
+
+            // (T)(Object) (dönüşüm ve çarpma işlemi) → yukarıda açıklamasını yaptığım dönüşümlerden sonra double olan 
+            //        verileri çarpma işlemine tabii tuttuk sonrasında elden edilen sonucu object'e çevirip
+            //        T tipli değere dönüştürüp T tipli maas field'ımıza değerini atadık
+            Maas = (T)(Object)((double)(Object)Saat * (double)(Object)SaatlikUcret);            
             return Maas;
         }
-        public T Goster(double SaatlikUcret)
+        public T Goster()
         {
-            if (SaatlikUcret <= 150)
+            MaasHesapla();// maasHesapla() metodunu çağırarak çıkan sonuca göre if yardımıyla sonucu ekrana bastırmayı istiyoruz
+            // T tipli maas field'ını object'e sonrasında double' a çevirerek işleme tabii tutuyoruz
+            if ((double)(Object)Maas <= 150)
             {
                 Console.WriteLine("Personel maaşınız: " + Maas);
             }
-            else if (SaatlikUcret > 150)
+            else if ((double)(Object)Maas > 150)
             {
                 Console.WriteLine("Yönetici maaşınız: " + Maas);
             }
@@ -46,7 +62,10 @@ namespace dll_kaynak
             
         }
 
-        // tür dönüşümlü
+
+        // tür dönüşümleri
+
+        // T Maas = (T)Convert.ChangeType(carpimi, TypeCode.Double); //double veriyi T türüne dönüştürme
 
         //public T Hesapla<T>(ref T a, ref T b)
         //{
