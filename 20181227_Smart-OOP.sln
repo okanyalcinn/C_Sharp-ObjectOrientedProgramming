@@ -135,6 +135,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll-kullanimi", "dll-kullan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll-kaynak", "dll-kaynak\dll-kaynak.csproj", "{213C47E7-DA1E-431A-8708-9FCCF4120F9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xml-serialization-deserializasyon", "xml-serialization-deserializasyon\xml-serialization-deserializasyon.csproj", "{9FDFB0C2-BAAD-49AC-9647-83B58E9A6F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xml-ornek2", "xml-ornek2\xml-ornek2.csproj", "{7AFB3546-B8D0-47FA-B469-92677DACE152}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -405,6 +409,14 @@ Global
 		{213C47E7-DA1E-431A-8708-9FCCF4120F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213C47E7-DA1E-431A-8708-9FCCF4120F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{213C47E7-DA1E-431A-8708-9FCCF4120F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FDFB0C2-BAAD-49AC-9647-83B58E9A6F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FDFB0C2-BAAD-49AC-9647-83B58E9A6F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FDFB0C2-BAAD-49AC-9647-83B58E9A6F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FDFB0C2-BAAD-49AC-9647-83B58E9A6F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFB3546-B8D0-47FA-B469-92677DACE152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFB3546-B8D0-47FA-B469-92677DACE152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFB3546-B8D0-47FA-B469-92677DACE152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFB3546-B8D0-47FA-B469-92677DACE152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -96,7 +96,7 @@ namespace indexer_ornek
             {
                 Console.WriteLine(uruns.Current.Adi +" "+ uruns.Current.Fiyat);
             }
-            //moveNex() iteratördeki ilk sıradaki elemanı alma
+            //moveNext() iteratördeki ilk sıradaki elemanı alma
             //Current = o andaki moveNext() edilen elemanı al diyoruz
         }
     }
