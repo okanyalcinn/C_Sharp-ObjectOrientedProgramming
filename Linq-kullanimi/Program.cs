@@ -27,7 +27,7 @@ namespace Linq_kullanimi
      *   
      * Lambda operatörü ( => )
      * Lambda ifadesi alınan her değer için var olan mekanizmayı her seferinde kullanmak 
-     * yerine doğrudan bu operatçr ile kullanım sağlarız
+     * yerine doğrudan bu operatör ile kullanım sağlarız
      * 
      * */
     class LambdaKullan
@@ -38,11 +38,7 @@ namespace Linq_kullanimi
             Hesapla hesapla = (sayi1, sayi2) => sayi1 + sayi2;
             
             Console.WriteLine(hesapla.Invoke(10,50));
-         }
-        //static void Topla(Hesapla islem)
-        //{
-        //    Console.WriteLine(islem.Invoke(5,6));
-        //}
+         }        
     }
     class Program
     {
@@ -75,6 +71,7 @@ namespace Linq_kullanimi
             //                            XML,
             //                            HTML,
             //                            Json
+            //                            dizi (array)
             var numaraDeger = from no in numaralar select no + 1;
 
             Console.WriteLine("Numaralar");
@@ -114,7 +111,7 @@ namespace Linq_kullanimi
         public void ListDuzenle()
         {
             string[] kelimeler = { "Apple", "WinDOws", "huaWei" };
-            //                                       new anahtar sözcüğü ile ilgili index elamanına bağlı 
+            //                                       new anahtar sözcüğü ile duzenle değişkenin içerisinde iki ayrı değişken varmış gibi işlemler yaptırabiliriz
             var duzenle = from k in kelimeler select new { Buyuk = k.ToUpper(), Kucuk = k.ToLower() };
 
             foreach (var item in duzenle)
@@ -140,7 +137,9 @@ namespace Linq_kullanimi
                             Basamak = (no % 2 == 0)
                         };
             foreach (var item in secim)
-            {
+            {//                                      new de tanımladığımız sayı ve 
+             //                                                                 basamak ? "çift": "tek" 
+                //                                                              if yapısının farklı bir versiyonu eğer koşul sağlanıyorsa çift sağlanmıyorsa tek
                 Console.WriteLine("Sayi {0} , {1} dir",item.Sayi, item.Basamak ? "çift" : "tek");
             }
         }
@@ -149,6 +148,7 @@ namespace Linq_kullanimi
         {
             int[] numaralar = { 0, 1, 7, 2, 3, 4, 5, 6 };
             //verilen dizi değer ile index sıralaması aynı olup olmadığını kontrol eden mekanizmadır
+            // index Linq yapısına ait bir parametredir
             var dogruIndexMi = numaralar.Select((num, index) => new { Numara = num, VarMi = (num == index) });
             Console.WriteLine("durum");
             foreach (var item in dogruIndexMi)
